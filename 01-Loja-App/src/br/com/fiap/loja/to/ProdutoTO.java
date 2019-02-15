@@ -3,6 +3,8 @@ package br.com.fiap.loja.to;
 import java.io.Serializable;
 
 public class ProdutoTO implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
 	private int codigo;
 	private String descricao;
 	private int quantidade;
