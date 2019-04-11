@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:selectManyCheckbox value="#{carrinhoBean.listaSelecionados}">
+
+	<f:selectItem itemLabel="Celular" itemValue="Celular" />
+	<br/>
+	<f:selectItem itemLabel="Fone" itemValue="Fone" />
+	<f:selectItem itemLabel="Carregador" itemValue="Carregador" />
+</h:selectManyCheckbox>
+
+
+<h:selectOneMenu value="#{carrinhoBean.quantidadeItens}">
+	<f:selectItems value="#{carrinhoBean.itens}" var="item"
+		itemLabel="#{item.quantidade}" itemValue="#{item.id}" />
+</h:selectOneMenu>
+
+<h:selectOneRadio value="#{carrinhoBean.pagamentoSelecionado}">
+	<f:selectItems value="#{carrinhoBean.formaPagamento}" var="pagamento"
+		itemLabel="#{pagamento.tipo}" itemValue="#{pagamento.id}" />
+</h:selectOneRadio>
+</html>
